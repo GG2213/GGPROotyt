@@ -19,7 +19,7 @@ local Settings = Instance.new("TextButton")
 local Selection = Instance.new("ImageButton")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local PFrame = Instance.new("Frame")
-local target = Instance.new("TextBox")
+local Target = Instance.new("TextBox")
 local UIListLayout = Instance.new("UIListLayout")
 local Teleport = Instance.new("TextButton")
 local UIGradient = Instance.new("UIGradient")
@@ -187,18 +187,18 @@ PFrame.BorderSizePixel = 0
 PFrame.Position = UDim2.new(0, 0, 0.132916585, 0)
 PFrame.Size = UDim2.new(0, 570, 0, 247)
 
-target.Name = "target"
-target.Parent = PFrame
-target.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
-target.BackgroundTransparency = 0.150
-target.BorderSizePixel = 0
-target.Size = UDim2.new(0, 570, 0, 39)
-target.Font = Enum.Font.Gotham
-target.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
-target.PlaceholderText = "Enter Target"
-target.Text = ""
-target.TextColor3 = Color3.fromRGB(0, 0, 0)
-target.TextSize = 14.000
+Target.Name = "Target"
+Target.Parent = PFrame
+Target.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Target.BackgroundTransparency = 0.150
+Target.BorderSizePixel = 0
+Target.Size = UDim2.new(0, 570, 0, 39)
+Target.Font = Enum.Font.Gotham
+Target.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Target.PlaceholderText = "Enter Target"
+Target.Text = ""
+Target.TextColor3 = Color3.fromRGB(0, 0, 0)
+Target.TextSize = 14.000
 
 UIListLayout.Parent = PFrame
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -301,7 +301,7 @@ Pattern.TileSize = UDim2.new(0, 90, 0, 90)
 
 -- Scripts:
 
-local function FPGTY_fake_script() -- pp.Drag 
+local function RFCH_fake_script() -- pp.Drag 
 	local script = Instance.new('LocalScript', pp)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -344,8 +344,8 @@ local function FPGTY_fake_script() -- pp.Drag
 		end
 	end)
 end
-coroutine.wrap(FPGTY_fake_script)()
-local function XJWDJYK_fake_script() -- Home.LocalScript 
+coroutine.wrap(RFCH_fake_script)()
+local function IPEZS_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -354,8 +354,8 @@ local function XJWDJYK_fake_script() -- Home.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(XJWDJYK_fake_script)()
-local function RQARD_fake_script() -- Player.LocalScript 
+coroutine.wrap(IPEZS_fake_script)()
+local function AMCJ_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -363,8 +363,8 @@ local function RQARD_fake_script() -- Player.LocalScript
 		script.Parent.Parent.Parent.Parent.PFrame.Visible = true
 	end)
 end
-coroutine.wrap(RQARD_fake_script)()
-local function LNNMB_fake_script() -- Toggles.LocalScript 
+coroutine.wrap(AMCJ_fake_script)()
+local function EFVPS_fake_script() -- Toggles.LocalScript 
 	local script = Instance.new('LocalScript', Toggles)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -376,8 +376,8 @@ local function LNNMB_fake_script() -- Toggles.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(LNNMB_fake_script)()
-local function MBRSYY_fake_script() -- Shop.LocalScript 
+coroutine.wrap(EFVPS_fake_script)()
+local function PMOHMY_fake_script() -- Shop.LocalScript 
 	local script = Instance.new('LocalScript', Shop)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -390,8 +390,8 @@ local function MBRSYY_fake_script() -- Shop.LocalScript
 	end)
 	
 end
-coroutine.wrap(MBRSYY_fake_script)()
-local function RYJZNCW_fake_script() -- Settings.LocalScript 
+coroutine.wrap(PMOHMY_fake_script)()
+local function ESINTR_fake_script() -- Settings.LocalScript 
 	local script = Instance.new('LocalScript', Settings)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -404,8 +404,8 @@ local function RYJZNCW_fake_script() -- Settings.LocalScript
 	end)
 	
 end
-coroutine.wrap(RYJZNCW_fake_script)()
-local function OMPGBZ_fake_script() -- DropDown.Effect 
+coroutine.wrap(ESINTR_fake_script)()
+local function TCOVQOU_fake_script() -- DropDown.Effect 
 	local script = Instance.new('LocalScript', DropDown)
 
 	local drop = script.Parent
@@ -444,8 +444,8 @@ local function OMPGBZ_fake_script() -- DropDown.Effect
 		end
 	end
 end
-coroutine.wrap(OMPGBZ_fake_script)()
-local function OABWRT_fake_script() -- Teleport.LocalScript 
+coroutine.wrap(TCOVQOU_fake_script)()
+local function ZLDORVE_fake_script() -- Teleport.LocalScript 
 	local script = Instance.new('LocalScript', Teleport)
 
 	spawn(function () -- TextButton.LocalScript 
@@ -458,7 +458,7 @@ local function OABWRT_fake_script() -- Teleport.LocalScript
 			local Player
 			Player = game.Players.LocalPlayer
 			character = workspace:WaitForChild(Player.name)
-			Target = target.Text
+			Target = script.Parent.Parent.Target.Text
 			Player.character.HumanoidRootPart.CFrame = game.Players[Target].character.HumanoidRootPart.CFrame
 		end)
 	
@@ -469,14 +469,14 @@ local function OABWRT_fake_script() -- Teleport.LocalScript
 	
 	
 end
-coroutine.wrap(OABWRT_fake_script)()
-local function OGGOCN_fake_script() -- Title_2.LocalScript 
+coroutine.wrap(ZLDORVE_fake_script)()
+local function SOHKKQP_fake_script() -- Title_2.LocalScript 
 	local script = Instance.new('LocalScript', Title_2)
 
 	script.Parent.Text = game.Players.LocalPlayer.Name
 end
-coroutine.wrap(OGGOCN_fake_script)()
-local function MZTK_fake_script() -- DestroyGUI.LocalScript 
+coroutine.wrap(SOHKKQP_fake_script)()
+local function CQBUGES_fake_script() -- DestroyGUI.LocalScript 
 	local script = Instance.new('LocalScript', DestroyGUI)
 
 	local player = game.Players.LocalPlayer
@@ -490,4 +490,4 @@ local function MZTK_fake_script() -- DestroyGUI.LocalScript
 		player.PlayerGui.ISE:Destroy()
 	end)
 end
-coroutine.wrap(MZTK_fake_script)()
+coroutine.wrap(CQBUGES_fake_script)()
