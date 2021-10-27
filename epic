@@ -91,7 +91,7 @@ Home.BackgroundColor3 = Color3.fromRGB(207, 207, 207)
 Home.BackgroundTransparency = 1.000
 Home.BorderSizePixel = 0
 Home.Position = UDim2.new(0, 0, NAN, 0)
-Home.Size = UDim2.new(0, 102, 0, 35)
+Home.Size = UDim2.new(0, 105, 0, 35)
 Home.Visible = false
 Home.ZIndex = 9
 Home.Font = Enum.Font.GothamBold
@@ -186,6 +186,7 @@ PFrame.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
 PFrame.BorderSizePixel = 0
 PFrame.Position = UDim2.new(0, 0, 0.132916585, 0)
 PFrame.Size = UDim2.new(0, 570, 0, 247)
+PFrame.Visible = false
 
 Target.Name = "Target"
 Target.Parent = PFrame
@@ -197,7 +198,7 @@ Target.Font = Enum.Font.Gotham
 Target.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
 Target.PlaceholderText = "Enter Target"
 Target.Text = ""
-Target.TextColor3 = Color3.fromRGB(0, 0, 0)
+Target.TextColor3 = Color3.fromRGB(255, 255, 255)
 Target.TextSize = 14.000
 
 UIListLayout.Parent = PFrame
@@ -206,7 +207,7 @@ UIListLayout.Padding = UDim.new(0, 3)
 
 Teleport.Name = "Teleport"
 Teleport.Parent = PFrame
-Teleport.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+Teleport.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
 Teleport.BorderSizePixel = 0
 Teleport.Position = UDim2.new(0, 0, 0.170040488, 0)
 Teleport.Size = UDim2.new(0, 570, 0, 40)
@@ -215,9 +216,10 @@ Teleport.Text = "Teleport"
 Teleport.TextColor3 = Color3.fromRGB(255, 255, 255)
 Teleport.TextSize = 14.000
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(5, 5, 5)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(5, 5, 5)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(210, 210, 210))}
 UIGradient.Offset = Vector2.new(0.365699321, -0.460786581)
 UIGradient.Rotation = 332.53271484375
+UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.25), NumberSequenceKeypoint.new(1.00, 0.00)}
 UIGradient.Parent = PFrame
 
 HFrame.Name = "HFrame"
@@ -226,7 +228,6 @@ HFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 HFrame.BorderSizePixel = 0
 HFrame.Position = UDim2.new(0, 0, 0.132916585, 0)
 HFrame.Size = UDim2.new(0, 570, 0, 247)
-HFrame.Visible = false
 
 Title.Name = "Title"
 Title.Parent = HFrame
@@ -301,7 +302,7 @@ Pattern.TileSize = UDim2.new(0, 90, 0, 90)
 
 -- Scripts:
 
-local function RFCH_fake_script() -- pp.Drag 
+local function JXUS_fake_script() -- pp.Drag 
 	local script = Instance.new('LocalScript', pp)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -344,8 +345,8 @@ local function RFCH_fake_script() -- pp.Drag
 		end
 	end)
 end
-coroutine.wrap(RFCH_fake_script)()
-local function IPEZS_fake_script() -- Home.LocalScript 
+coroutine.wrap(JXUS_fake_script)()
+local function TBPFLRJ_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -354,8 +355,8 @@ local function IPEZS_fake_script() -- Home.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(IPEZS_fake_script)()
-local function AMCJ_fake_script() -- Player.LocalScript 
+coroutine.wrap(TBPFLRJ_fake_script)()
+local function GJYHH_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -363,8 +364,8 @@ local function AMCJ_fake_script() -- Player.LocalScript
 		script.Parent.Parent.Parent.Parent.PFrame.Visible = true
 	end)
 end
-coroutine.wrap(AMCJ_fake_script)()
-local function EFVPS_fake_script() -- Toggles.LocalScript 
+coroutine.wrap(GJYHH_fake_script)()
+local function FTIOPXR_fake_script() -- Toggles.LocalScript 
 	local script = Instance.new('LocalScript', Toggles)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -376,8 +377,8 @@ local function EFVPS_fake_script() -- Toggles.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(EFVPS_fake_script)()
-local function PMOHMY_fake_script() -- Shop.LocalScript 
+coroutine.wrap(FTIOPXR_fake_script)()
+local function OSKH_fake_script() -- Shop.LocalScript 
 	local script = Instance.new('LocalScript', Shop)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -390,8 +391,8 @@ local function PMOHMY_fake_script() -- Shop.LocalScript
 	end)
 	
 end
-coroutine.wrap(PMOHMY_fake_script)()
-local function ESINTR_fake_script() -- Settings.LocalScript 
+coroutine.wrap(OSKH_fake_script)()
+local function MDWAXE_fake_script() -- Settings.LocalScript 
 	local script = Instance.new('LocalScript', Settings)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -404,8 +405,8 @@ local function ESINTR_fake_script() -- Settings.LocalScript
 	end)
 	
 end
-coroutine.wrap(ESINTR_fake_script)()
-local function TCOVQOU_fake_script() -- DropDown.Effect 
+coroutine.wrap(MDWAXE_fake_script)()
+local function XHWJJ_fake_script() -- DropDown.Effect 
 	local script = Instance.new('LocalScript', DropDown)
 
 	local drop = script.Parent
@@ -444,8 +445,8 @@ local function TCOVQOU_fake_script() -- DropDown.Effect
 		end
 	end
 end
-coroutine.wrap(TCOVQOU_fake_script)()
-local function ZLDORVE_fake_script() -- Teleport.LocalScript 
+coroutine.wrap(XHWJJ_fake_script)()
+local function GNNCRN_fake_script() -- Teleport.LocalScript 
 	local script = Instance.new('LocalScript', Teleport)
 
 	spawn(function () -- TextButton.LocalScript 
@@ -469,14 +470,14 @@ local function ZLDORVE_fake_script() -- Teleport.LocalScript
 	
 	
 end
-coroutine.wrap(ZLDORVE_fake_script)()
-local function SOHKKQP_fake_script() -- Title_2.LocalScript 
+coroutine.wrap(GNNCRN_fake_script)()
+local function EZZAWZL_fake_script() -- Title_2.LocalScript 
 	local script = Instance.new('LocalScript', Title_2)
 
 	script.Parent.Text = game.Players.LocalPlayer.Name
 end
-coroutine.wrap(SOHKKQP_fake_script)()
-local function CQBUGES_fake_script() -- DestroyGUI.LocalScript 
+coroutine.wrap(EZZAWZL_fake_script)()
+local function WIDUIB_fake_script() -- DestroyGUI.LocalScript 
 	local script = Instance.new('LocalScript', DestroyGUI)
 
 	local player = game.Players.LocalPlayer
@@ -490,4 +491,4 @@ local function CQBUGES_fake_script() -- DestroyGUI.LocalScript
 		player.PlayerGui.ISE:Destroy()
 	end)
 end
-coroutine.wrap(CQBUGES_fake_script)()
+coroutine.wrap(WIDUIB_fake_script)()
