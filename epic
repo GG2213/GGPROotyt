@@ -190,7 +190,6 @@ PFrame.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
 PFrame.BorderSizePixel = 0
 PFrame.Position = UDim2.new(0, 0, 0.975021839, 0)
 PFrame.Size = UDim2.new(0, 570, 0, 247)
-PFrame.Visible = false
 
 Target.Name = "Target"
 Target.Parent = PFrame
@@ -436,7 +435,7 @@ Input.TextSize = 14.000
 
 -- Scripts:
 
-local function LGSH_fake_script() -- pp.Drag 
+local function RQJNAT_fake_script() -- pp.Drag 
 	local script = Instance.new('LocalScript', pp)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -479,8 +478,8 @@ local function LGSH_fake_script() -- pp.Drag
 		end
 	end)
 end
-coroutine.wrap(LGSH_fake_script)()
-local function HBRF_fake_script() -- Home.LocalScript 
+coroutine.wrap(RQJNAT_fake_script)()
+local function OKKGIO_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -490,8 +489,8 @@ local function HBRF_fake_script() -- Home.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(HBRF_fake_script)()
-local function QGBVCFR_fake_script() -- Player.LocalScript 
+coroutine.wrap(OKKGIO_fake_script)()
+local function PTQBFAD_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -501,8 +500,8 @@ local function QGBVCFR_fake_script() -- Player.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(QGBVCFR_fake_script)()
-local function DTSE_fake_script() -- Toggles.LocalScript 
+coroutine.wrap(PTQBFAD_fake_script)()
+local function KXNIB_fake_script() -- Toggles.LocalScript 
 	local script = Instance.new('LocalScript', Toggles)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -512,8 +511,8 @@ local function DTSE_fake_script() -- Toggles.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(DTSE_fake_script)()
-local function AFVGUA_fake_script() -- Shop.LocalScript 
+coroutine.wrap(KXNIB_fake_script)()
+local function JMOZO_fake_script() -- Shop.LocalScript 
 	local script = Instance.new('LocalScript', Shop)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -526,8 +525,8 @@ local function AFVGUA_fake_script() -- Shop.LocalScript
 	end)
 	
 end
-coroutine.wrap(AFVGUA_fake_script)()
-local function MHWQ_fake_script() -- Settings.LocalScript 
+coroutine.wrap(JMOZO_fake_script)()
+local function CHDNDN_fake_script() -- Settings.LocalScript 
 	local script = Instance.new('LocalScript', Settings)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -540,8 +539,8 @@ local function MHWQ_fake_script() -- Settings.LocalScript
 	end)
 	
 end
-coroutine.wrap(MHWQ_fake_script)()
-local function HBGD_fake_script() -- DropDown.Effect 
+coroutine.wrap(CHDNDN_fake_script)()
+local function PJELXPK_fake_script() -- DropDown.Effect 
 	local script = Instance.new('LocalScript', DropDown)
 
 	local drop = script.Parent
@@ -581,8 +580,8 @@ local function HBGD_fake_script() -- DropDown.Effect
 		end
 	end
 end
-coroutine.wrap(HBGD_fake_script)()
-local function TNSFU_fake_script() -- Teleport.LocalScript 
+coroutine.wrap(PJELXPK_fake_script)()
+local function MKTBXK_fake_script() -- Teleport.LocalScript 
 	local script = Instance.new('LocalScript', Teleport)
 
 	spawn(function () -- TextButton.LocalScript 
@@ -606,14 +605,14 @@ local function TNSFU_fake_script() -- Teleport.LocalScript
 	
 	
 end
-coroutine.wrap(TNSFU_fake_script)()
-local function YQDS_fake_script() -- Title_2.LocalScript 
+coroutine.wrap(MKTBXK_fake_script)()
+local function DYTXFZV_fake_script() -- Title_2.LocalScript 
 	local script = Instance.new('LocalScript', Title_2)
 
 	script.Parent.Text = game.Players.LocalPlayer.Name
 end
-coroutine.wrap(YQDS_fake_script)()
-local function XCKWH_fake_script() -- DestroyGUI.LocalScript 
+coroutine.wrap(DYTXFZV_fake_script)()
+local function PZGS_fake_script() -- DestroyGUI.LocalScript 
 	local script = Instance.new('LocalScript', DestroyGUI)
 
 	local player = game.Players.LocalPlayer
@@ -627,8 +626,8 @@ local function XCKWH_fake_script() -- DestroyGUI.LocalScript
 		player.PlayerGui.ISE:Destroy()
 	end)
 end
-coroutine.wrap(XCKWH_fake_script)()
-local function MFDVSYL_fake_script() -- clear.LocalScript 
+coroutine.wrap(PZGS_fake_script)()
+local function DKIMCB_fake_script() -- clear.LocalScript 
 	local script = Instance.new('LocalScript', clear)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -638,8 +637,8 @@ local function MFDVSYL_fake_script() -- clear.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(MFDVSYL_fake_script)()
-local function LCFEKC_fake_script() -- Fly.LocalScript 
+coroutine.wrap(DKIMCB_fake_script)()
+local function YSKW_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -732,8 +731,8 @@ local function LCFEKC_fake_script() -- Fly.LocalScript
 	end)
 	
 end
-coroutine.wrap(LCFEKC_fake_script)()
-local function DHFK_fake_script() -- Fov.LocalScript 
+coroutine.wrap(YSKW_fake_script)()
+local function XMDM_fake_script() -- Fov.LocalScript 
 	local script = Instance.new('LocalScript', Fov)
 
 	local Player = game:GetService("Players").LocalPlayer
@@ -749,8 +748,8 @@ local function DHFK_fake_script() -- Fov.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DHFK_fake_script)()
-local function YXSGVSO_fake_script() -- walksped.SliderManager 
+coroutine.wrap(XMDM_fake_script)()
+local function UAVPN_fake_script() -- walksped.SliderManager 
 	local script = Instance.new('LocalScript', walksped)
 
 	local slider = script.Parent.Slider
@@ -794,8 +793,8 @@ local function YXSGVSO_fake_script() -- walksped.SliderManager
 		end
 	end)
 end
-coroutine.wrap(YXSGVSO_fake_script)()
-local function DRNJUBA_fake_script() -- walksped.LocalScript 
+coroutine.wrap(UAVPN_fake_script)()
+local function JIVLNA_fake_script() -- walksped.LocalScript 
 	local script = Instance.new('LocalScript', walksped)
 
 	wait(2) -- waits for player to load
@@ -809,4 +808,4 @@ local function DRNJUBA_fake_script() -- walksped.LocalScript
 	
 	-- Minecraft_Developer (McDev)
 end
-coroutine.wrap(DRNJUBA_fake_script)()
+coroutine.wrap(JIVLNA_fake_script)()
