@@ -1,12 +1,11 @@
 -- Gui to Lua
--- Version: 3.3
+-- Version: 3.2
 
 -- Instances:
 
 local ISE = Instance.new("ScreenGui")
 local pp = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
-local Bar = Instance.new("Frame")
 local DropDown = Instance.new("Frame")
 local Menu = Instance.new("Frame")
 local UI = Instance.new("UIListLayout")
@@ -23,6 +22,7 @@ local Target = Instance.new("TextBox")
 local UIListLayout = Instance.new("UIListLayout")
 local Teleport = Instance.new("TextButton")
 local UIGradient = Instance.new("UIGradient")
+local Prediction = Instance.new("TextLabel")
 local HFrame = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
 local Title_2 = Instance.new("TextLabel")
@@ -32,6 +32,7 @@ local JoinDiscord = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
 local UIGradient_2 = Instance.new("UIGradient")
 local Pattern = Instance.new("ImageLabel")
+local clear = Instance.new("ImageButton")
 
 --Properties:
 
@@ -43,27 +44,19 @@ pp.Name = "pp"
 pp.Parent = ISE
 pp.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
 pp.BorderSizePixel = 0
-pp.Position = UDim2.new(0.0108917654, 0, 0.0136373937, 0)
-pp.Size = UDim2.new(0, 570, 0, 285)
+pp.Position = UDim2.new(0.0108917635, 0, 0.0136373928, 0)
+pp.Size = UDim2.new(0, 570, 0, 38)
 
 TextLabel.Parent = pp
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.0204678364, 0, 0.020055823, 0)
+TextLabel.Position = UDim2.new(0.0187134501, 0, 0.151634783, 0)
 TextLabel.Size = UDim2.new(0, 34, 0, 25)
 TextLabel.Text = ".GG"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
-
-Bar.Name = "Bar"
-Bar.Parent = pp
-Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Bar.BorderColor3 = Color3.fromRGB(255, 255, 255)
-Bar.BorderSizePixel = 0
-Bar.Position = UDim2.new(0, 0, 0.129407808, 0)
-Bar.Size = UDim2.new(0, 570, 0, 1)
 
 DropDown.Name = "DropDown"
 DropDown.Parent = pp
@@ -184,7 +177,7 @@ PFrame.Name = "PFrame"
 PFrame.Parent = pp
 PFrame.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
 PFrame.BorderSizePixel = 0
-PFrame.Position = UDim2.new(0, 0, 0.132916585, 0)
+PFrame.Position = UDim2.new(0, 0, 0.975021839, 0)
 PFrame.Size = UDim2.new(0, 570, 0, 247)
 PFrame.Visible = false
 
@@ -222,12 +215,28 @@ UIGradient.Rotation = 332.53271484375
 UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.25), NumberSequenceKeypoint.new(1.00, 0.00)}
 UIGradient.Parent = PFrame
 
+Prediction.Name = "Prediction"
+Prediction.Parent = PFrame
+Prediction.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Prediction.BackgroundTransparency = 1.000
+Prediction.Position = UDim2.new(0.071794875, 0, 0.361431003, 0)
+Prediction.Size = UDim2.new(0.852787733, 0, 0.256673783, 0)
+Prediction.Visible = false
+Prediction.ZIndex = 5
+Prediction.Font = Enum.Font.GothamBold
+Prediction.Text = "Cancel syncing to access dances"
+Prediction.TextColor3 = Color3.fromRGB(255, 255, 255)
+Prediction.TextScaled = true
+Prediction.TextSize = 14.000
+Prediction.TextWrapped = true
+
 HFrame.Name = "HFrame"
 HFrame.Parent = pp
 HFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 HFrame.BorderSizePixel = 0
-HFrame.Position = UDim2.new(0, 0, 0.132916585, 0)
+HFrame.Position = UDim2.new(0, 0, 0.97502178, 0)
 HFrame.Size = UDim2.new(0, 570, 0, 247)
+HFrame.Visible = false
 
 Title.Name = "Title"
 Title.Parent = HFrame
@@ -293,16 +302,27 @@ Pattern.Name = "Pattern"
 Pattern.Parent = HFrame
 Pattern.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Pattern.BackgroundTransparency = 1.000
-Pattern.Size = UDim2.new(0, 570, 0, 246)
+Pattern.Position = UDim2.new(0, 0, -0.000187059166, 0)
+Pattern.Size = UDim2.new(0, 570, 0, 247)
 Pattern.Image = "rbxassetid://37924106"
 Pattern.ImageTransparency = 0.900
 Pattern.ScaleType = Enum.ScaleType.Tile
 Pattern.SliceCenter = Rect.new(0, 256, 0, 256)
 Pattern.TileSize = UDim2.new(0, 90, 0, 90)
 
+clear.Name = "clear"
+clear.Parent = pp
+clear.BackgroundTransparency = 1.000
+clear.Position = UDim2.new(0.88596493, 0, 0.171052635, 0)
+clear.Size = UDim2.new(0, 25, 0, 24)
+clear.ZIndex = 2
+clear.Image = "rbxassetid://3926305904"
+clear.ImageRectOffset = Vector2.new(924, 724)
+clear.ImageRectSize = Vector2.new(36, 36)
+
 -- Scripts:
 
-local function DKHYC_fake_script() -- pp.Drag 
+local function MGQS_fake_script() -- pp.Drag 
 	local script = Instance.new('LocalScript', pp)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -345,8 +365,8 @@ local function DKHYC_fake_script() -- pp.Drag
 		end
 	end)
 end
-coroutine.wrap(DKHYC_fake_script)()
-local function LLYRFYT_fake_script() -- Home.LocalScript 
+coroutine.wrap(MGQS_fake_script)()
+local function KGIYU_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -355,8 +375,8 @@ local function LLYRFYT_fake_script() -- Home.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(LLYRFYT_fake_script)()
-local function UDCR_fake_script() -- Player.LocalScript 
+coroutine.wrap(KGIYU_fake_script)()
+local function AGVVMAS_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -364,8 +384,8 @@ local function UDCR_fake_script() -- Player.LocalScript
 		script.Parent.Parent.Parent.Parent.PFrame.Visible = true
 	end)
 end
-coroutine.wrap(UDCR_fake_script)()
-local function ELTEK_fake_script() -- Toggles.LocalScript 
+coroutine.wrap(AGVVMAS_fake_script)()
+local function QMMHJHC_fake_script() -- Toggles.LocalScript 
 	local script = Instance.new('LocalScript', Toggles)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -377,8 +397,8 @@ local function ELTEK_fake_script() -- Toggles.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(ELTEK_fake_script)()
-local function ECSSPAA_fake_script() -- Shop.LocalScript 
+coroutine.wrap(QMMHJHC_fake_script)()
+local function JLLMRH_fake_script() -- Shop.LocalScript 
 	local script = Instance.new('LocalScript', Shop)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -391,8 +411,8 @@ local function ECSSPAA_fake_script() -- Shop.LocalScript
 	end)
 	
 end
-coroutine.wrap(ECSSPAA_fake_script)()
-local function LMURY_fake_script() -- Settings.LocalScript 
+coroutine.wrap(JLLMRH_fake_script)()
+local function ETKHAV_fake_script() -- Settings.LocalScript 
 	local script = Instance.new('LocalScript', Settings)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -405,8 +425,8 @@ local function LMURY_fake_script() -- Settings.LocalScript
 	end)
 	
 end
-coroutine.wrap(LMURY_fake_script)()
-local function TKBKVZ_fake_script() -- DropDown.Effect 
+coroutine.wrap(ETKHAV_fake_script)()
+local function RHPOQ_fake_script() -- DropDown.Effect 
 	local script = Instance.new('LocalScript', DropDown)
 
 	local drop = script.Parent
@@ -416,6 +436,7 @@ local function TKBKVZ_fake_script() -- DropDown.Effect
 	selection.MouseButton1Click:Connect(function()
 		if not open then
 			menu:TweenSize(UDim2.new(2.5, 0,8.521, 0), "Out", "Sine", 0.15, true)
+			wait(0.1)
 			for _, button in pairs(menu:GetChildren()) do
 				if button:IsA("TextButton") then
 					button.Visible = true
@@ -424,7 +445,7 @@ local function TKBKVZ_fake_script() -- DropDown.Effect
 			open = true
 		else
 			menu:TweenSize(UDim2.new(2.452, 0,0, 0), "Out", "Sine", 0.15, true)
-			wait(0.05)
+			wait(0)
 			for _, button in pairs(menu:GetChildren()) do
 				if button:IsA("TextButton") then
 					button.Visible = false
@@ -445,8 +466,8 @@ local function TKBKVZ_fake_script() -- DropDown.Effect
 		end
 	end
 end
-coroutine.wrap(TKBKVZ_fake_script)()
-local function OSLAAV_fake_script() -- Teleport.LocalScript 
+coroutine.wrap(RHPOQ_fake_script)()
+local function IEYIG_fake_script() -- Teleport.LocalScript 
 	local script = Instance.new('LocalScript', Teleport)
 
 	spawn(function () -- TextButton.LocalScript 
@@ -470,14 +491,229 @@ local function OSLAAV_fake_script() -- Teleport.LocalScript
 	
 	
 end
-coroutine.wrap(OSLAAV_fake_script)()
-local function ZWWAUDX_fake_script() -- Title_2.LocalScript 
+coroutine.wrap(IEYIG_fake_script)()
+local function TQZLJTM_fake_script() -- PFrame.DanceWithClient 
+	local script = Instance.new('LocalScript', PFrame)
+
+	-- Decompiled with the Synapse X Luau decompiler.
+	
+	local l__DanceWithTB__1 = script.Parent:WaitForChild("DanceWithTB");
+	local l__DancingWith__2 = script.Parent:WaitForChild("DancingWith");
+	local l__CurrentlyWith__3 = l__DancingWith__2:WaitForChild("CurrentlyWith");
+	local l__Cancel__4 = l__DancingWith__2:WaitForChild("Cancel");
+	local u1 = nil;
+	local l__LocalPlayer__2 = game.Players.LocalPlayer;
+	local l__DanceWithServer__3 = game.ReplicatedStorage:WaitForChild("DanceWithServer");
+	local l__TextBox__4 = l__DanceWithTB__1:WaitForChild("TextBox");
+	local l__Prediction__5 = l__DanceWithTB__1:WaitForChild("Prediction");
+	local l__BG__6 = script.Parent:WaitForChild("BG");
+	local l__DanceWithCover__7 = script.Parent:WaitForChild("DanceWithCover");
+	local u8 = nil;
+	local u9 = nil;
+	local u10 = nil;
+	local u11 = nil;
+	local u12 = nil;
+	local function u13(p1, p2)
+		pcall(function()
+			local v5 = nil;
+			for v6, v7 in pairs(p2.Character:WaitForChild("Humanoid"):WaitForChild("Animator"):GetPlayingAnimationTracks()) do
+				if v7.Priority == Enum.AnimationPriority.Action then
+					v5 = v7;
+				end;
+			end;
+			for v8, v9 in pairs(p1.Character:WaitForChild("Humanoid"):WaitForChild("Animator"):GetPlayingAnimationTracks()) do
+				if v9.Priority == Enum.AnimationPriority.Action then
+					v9.TimePosition = v5.TimePosition;
+				end;
+			end;
+		end);
+	end;
+	l__DanceWithServer__3.OnClientEvent:Connect(function(p3, p4, p5)
+		if p3 == "Sync" then
+			u13(p4, p5);
+			delay(1, function()
+				u13(p4, p5);
+			end);
+		end;
+	end);
+	local u14 = nil;
+	l__TextBox__4:GetPropertyChangedSignal("Text"):Connect(function()
+		local v10 = false;
+		if l__TextBox__4.Text ~= "" and l__TextBox__4.Text ~= " " then
+			for v11, v12 in pairs(game.Players:GetPlayers()) do
+				if v12 ~= l__LocalPlayer__2 and l__TextBox__4.Text:lower() == v12.Name:lower():sub(1, #l__TextBox__4.Text) then
+					l__Prediction__5.Text = l__TextBox__4.Text .. v12.Name:sub(#l__TextBox__4.Text + 1);
+					v10 = true;
+					u14 = v12;
+				end;
+			end;
+		end;
+		if not v10 then
+			u14 = nil;
+			l__Prediction__5.Text = "";
+		end;
+	end);
+	l__TextBox__4.Focused:Connect(function()
+		l__TextBox__4.TextXAlignment = Enum.TextXAlignment.Left;
+		l__Prediction__5.TextXAlignment = Enum.TextXAlignment.Left;
+		l__TextBox__4.PlaceholderText = "Type player name";
+	end);
+	local function u15(p6, p7)
+		for v13, v14 in pairs(p6.Character:WaitForChild("Humanoid"):WaitForChild("Animator"):GetPlayingAnimationTracks()) do
+			if v14.Priority == Enum.AnimationPriority.Action then
+				if p7 and v14.Name == "SyncedAnimation" then
+					return v14;
+				end;
+				if not p7 then
+					return v14;
+				end;
+			end;
+		end;
+	end;
+	local function u16()
+		if u1 ~= nil then
+			for v15, v16 in pairs((l__LocalPlayer__2.Character or l__LocalPlayer__2.CharacterAdded:Wait()):WaitForChild("Humanoid"):WaitForChild("Animator"):GetPlayingAnimationTracks()) do
+				if v16.Priority == Enum.AnimationPriority.Action and v16.Name == "SyncedAnimation" then
+					v16:Stop();
+					v16:Destroy();
+				end;
+			end;
+			l__DanceWithServer__3:FireServer("RemoveSync", "");
+			l__TextBox__4.Text = "";
+			l__Prediction__5.Text = "";
+			l__DanceWithTB__1.Visible = true;
+			l__DancingWith__2.Visible = false;
+			l__BG__6.Visible = true;
+			l__DanceWithCover__7.Visible = false;
+			u1 = nil;
+			u8:Disconnect();
+			u8 = nil;
+			u9:Disconnect();
+			u9 = nil;
+			u10:Disconnect();
+			u10 = nil;
+			u11:Disconnect();
+			u11 = nil;
+			u12:Disconnect();
+			u12 = nil;
+		end;
+	end;
+	l__TextBox__4.FocusLost:Connect(function()
+		l__TextBox__4.TextXAlignment = Enum.TextXAlignment.Center;
+		l__Prediction__5.TextXAlignment = Enum.TextXAlignment.Center;
+		l__TextBox__4.PlaceholderText = "Dance With";
+		if u14 == nil then
+			if l__TextBox__4.Text ~= "" and l__TextBox__4.Text ~= " " then
+				l__TextBox__4.Text = "Invalid player";
+				wait(1);
+				l__TextBox__4.Text = "";
+			end;
+			return;
+		end;
+		if u14:FindFirstChild("SyncedWith") then
+			local l__Value__17 = u14.SyncedWith.Value;
+			if l__Value__17 == l__LocalPlayer__2 then
+				l__TextBox__4.Text = "Cannot sync yourself";
+				wait(1);
+				l__TextBox__4.Text = "";
+				return;
+			end;
+			u14 = l__Value__17;
+		end;
+		if not u15(u14, false) then
+			l__TextBox__4.Text = "Player not dancing";
+			wait(1);
+			l__TextBox__4.Text = "";
+			return;
+		end;
+		l__DanceWithServer__3:FireServer("DanceWith", u14.Name);
+		u1 = u14;
+		local v18 = u14.Character or u14.CharacterAdded:Wait();
+		local l__Humanoid__19 = v18:WaitForChild("Humanoid");
+		local l__Animator__20 = v18:WaitForChild("Humanoid"):WaitForChild("Animator");
+		local l__Humanoid__21 = (l__LocalPlayer__2.Character or l__LocalPlayer__2.CharacterAdded:Wait()):WaitForChild("Humanoid");
+		local l__Animator__22 = l__Humanoid__21:WaitForChild("Animator");
+		for v23, v24 in pairs(l__Animator__22:GetPlayingAnimationTracks()) do
+			if v24.Priority == Enum.AnimationPriority.Action then
+				v24:Stop();
+				v24:Destroy();
+			end;
+		end;
+		local v25 = nil;
+		for v26, v27 in pairs(l__Animator__20:GetPlayingAnimationTracks()) do
+			if v27.Priority == Enum.AnimationPriority.Action then
+				v25 = v27;
+			end;
+		end;
+		local v28 = l__Animator__22:LoadAnimation(v25.Animation);
+		v28.Name = "SyncedAnimation";
+		v28:Play();
+		u8 = game.Players.PlayerRemoving:Connect(function(p8)
+			if p8 == u1 then
+				u16();
+			end;
+		end);
+		u10 = l__Humanoid__21.Died:Connect(function()
+			u16();
+		end);
+		u11 = l__Humanoid__19.Died:Connect(function()
+			u16();
+		end);
+		u12 = u14.ChildAdded:Connect(function(p9)
+			if p9:IsA("ObjectValue") and p9.Name == "SyncedWith" then
+				u16();
+			end;
+		end);
+		v25.Stopped:Connect(function()
+			v28:Stop();
+			v28:Destroy();
+		end);
+		u9 = l__Animator__20.AnimationPlayed:Connect(function(p10)
+			if p10.Priority == Enum.AnimationPriority.Action then
+				local v29 = u15(l__LocalPlayer__2, true);
+				if v29 then
+					v29:Stop();
+					v29:Destroy();
+				end;
+				local v30 = (l__LocalPlayer__2.Character or l__LocalPlayer__2.CharacterAdded:Wait()):WaitForChild("Humanoid"):WaitForChild("Animator"):LoadAnimation(p10.Animation);
+				v30.Name = "SyncedAnimation";
+				v30:Play();
+				v30.TimePosition = p10.TimePosition;
+				p10.Stopped:Connect(function()
+					v30:Stop();
+					v30:Destroy();
+				end);
+				delay(0.5, function()
+					u13(l__LocalPlayer__2, u1);
+				end);
+			end;
+		end);
+		l__CurrentlyWith__3.Text = "Sync: " .. u1.Name;
+		l__DanceWithTB__1.Visible = false;
+		l__DancingWith__2.Visible = true;
+		l__BG__6.Visible = false;
+		l__DanceWithCover__7.Visible = true;
+	end);
+	l__Cancel__4.MouseButton1Click:Connect(function()
+		u16();
+	end);
+	while wait(2.5) do
+		for v31, v32 in pairs(game.Players:GetPlayers()) do
+			if v32:FindFirstChild("SyncedWith") then
+				u13(v32, v32.SyncedWith.Value);
+			end;
+		end;
+	end;
+	
+end
+coroutine.wrap(TQZLJTM_fake_script)()
+local function JFOSB_fake_script() -- Title_2.LocalScript 
 	local script = Instance.new('LocalScript', Title_2)
 
 	script.Parent.Text = game.Players.LocalPlayer.Name
 end
-coroutine.wrap(ZWWAUDX_fake_script)()
-local function DHFUZVO_fake_script() -- DestroyGUI.LocalScript 
+coroutine.wrap(JFOSB_fake_script)()
+local function TQIHMS_fake_script() -- DestroyGUI.LocalScript 
 	local script = Instance.new('LocalScript', DestroyGUI)
 
 	local player = game.Players.LocalPlayer
@@ -491,4 +727,14 @@ local function DHFUZVO_fake_script() -- DestroyGUI.LocalScript
 		player.PlayerGui.ISE:Destroy()
 	end)
 end
-coroutine.wrap(DHFUZVO_fake_script)()
+coroutine.wrap(TQIHMS_fake_script)()
+local function GMUEX_fake_script() -- clear.LocalScript 
+	local script = Instance.new('LocalScript', clear)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.HFrame.Visible = false
+		script.Parent.Parent.PFrame.Visible = false
+		wait(0.1)
+	end)
+end
+coroutine.wrap(GMUEX_fake_script)()
