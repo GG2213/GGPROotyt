@@ -28,7 +28,7 @@ local UICorner_8 = Instance.new("UICorner")
 --Properties:
 
 GG.Name = "GG"
-GG.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+GG.Parent = game.Players.LocalPlayer:WaitForChild("CoreGui")
 
 Frame.Parent = GG
 Frame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
@@ -179,7 +179,7 @@ UICorner_8.Parent = Toggle1
 
 -- Scripts:
 
-local function XFAJKHC_fake_script() -- TextButton_6.LocalScript 
+local function CUDI_fake_script() -- TextButton_6.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_6)
 
 	toggle = false
@@ -374,8 +374,8 @@ local function XFAJKHC_fake_script() -- TextButton_6.LocalScript
 	end)
 	
 end
-coroutine.wrap(XFAJKHC_fake_script)()
-local function CQWYVE_fake_script() -- Frame.Drag 
+coroutine.wrap(CUDI_fake_script)()
+local function OQNDKG_fake_script() -- Frame.Drag 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -418,4 +418,4 @@ local function CQWYVE_fake_script() -- Frame.Drag
 		end
 	end)
 end
-coroutine.wrap(CQWYVE_fake_script)()
+coroutine.wrap(OQNDKG_fake_script)()
